@@ -1,0 +1,505 @@
+<!doctype html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Bahiana" rel="stylesheet">
+	<title>SF-Game</title>
+	<meta charset="utf-8">
+<link rel="icon" href="favcrown.jpg" type="image/jpg">
+	<link rel="stylesheet" type="text/css" href="style2.css" >
+	<meta name="viewport"content="width=device-width,initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="//code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<script type="text/javascript" src="test.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<style> 
+#panel, #flip {
+	margin-left:-300px;	
+    padding: 5px;
+    text-align: center;
+    background-color: #ff8f59;
+    border: solid 1px #c3c3c3;
+}
+
+#panel {
+    padding: 5px;
+    display: none;
+}
+.inst{
+font-family: 'Bahiana', cursive;
+font-size:40px;
+}
+.insti{
+font-family: 'Bahiana', cursive;
+font-size:28px;
+}
+</style>	
+<style>
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Merriweather|Open+Sans|Oswald|Special+Elite');
+</style>
+<style type="text/css">	
+.bo{
+	border-image-source: url(border.jpg);
+	border-image-repeat: repeat-y;
+		
+}
+
+
+#flipback{
+		
+		-webkit-transform:rotate(120deg);
+}
+
+.tim{
+	font-color:white;
+	font-size:40px;
+	margin-left:450px;
+	width:40px;
+	height:40px;
+	margin-top:-600px;
+	padding-bottom:40px;
+	
+}
+
+l:hover{
+	background-color:black;
+}
+.timback{
+	margin-top:-40px;
+	border-style:solid;
+	border-width:2px;
+	border-color:orange;
+	width:75px;
+	
+	
+	color:white;
+	text-align:center;
+	border-style:none;
+	border-width:2px;
+	border-color:orange;
+}	
+
+.butt{
+	margin-top:10px;
+	width:90px;
+	height:70px;
+	background:#800000;
+	color:white;
+	text-align:center;
+	border-style:solid;
+	border-width:2px;
+	border-color:orange;
+}
+.limit{
+	max-width:15px;
+}
+.b77{
+	width:1050px;
+	margin-left:-80px;
+	margin-top:75px;
+}
+.cur{
+	cursor:pointer;
+}
+.text-glow:hover, .text-glow:focus, .text-glow:active {
+   -webkit-stroke-width: 5.3px;
+   -webkit-stroke-color: #FFFFFF;
+   -webkit-fill-color: #FFFFFF;
+   text-shadow: 1px 0px 20px yellow;
+   -webkit-transition: width 0.3s; 
+   transition: width 0.3s;
+   -moz-transition: width 0.3s; 
+   -o-transition: width 0.3s;
+   animation:animate 1s infinite linear;
+   }
+@keyframes animate
+{
+	0%
+	{
+		color:orange;
+		text-shadow: none;
+	}
+
+	18%
+	{
+		color:orange;
+		text-shadow: none;
+	}
+	
+	20%
+	{
+		color:red;
+		text-shadow: 0 0 7px #fff900 , 0 0 20px #fff6c00;
+	}
+	
+	30%
+	{
+		color:orange;
+		text-shadow: none;
+	}
+
+	35%
+	{
+		color:red;
+		text-shadow: 0 0 7px #fff900 , 0 0 20px #fff6c00;
+	}
+
+	70%
+	{
+		color:orange;
+		text-shadow: none;
+	}
+	85%
+	{
+		color:red;
+		text-shadow: 0 0 7px #fff900 , 0 0 20px #fff6c00;
+	}
+
+	90%
+	{
+		color:orange;
+		text-shadow: none;
+	}
+
+	100%
+	{
+		color:red;
+		text-shadow: 0 0 7px #fff900 , 0 0 20px #fff6c00;
+	}
+
+
+
+}
+
+
+    .glower1 {
+        -webkit-animation-duration: 1s;
+        -webkit-animation-name: glow;
+        -webkit-animation-direction: alternate;
+        -webkit-animation-iteration-count: infinite;
+        animation-duration: 1s;
+        animation-name: glow;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+    
+    }
+    
+    @-webkit-keyframes glow {
+        from { text-shadow: 0 0 0px white; }
+        to { text-shadow: 0 0 30px white; }
+    }
+  .glow2 {
+        -webkit-animation-duration: 1s;
+        -webkit-animation-name: glow;
+        -webkit-animation-direction: alternate;
+        -webkit-animation-iteration-count: infinite;
+        animation-duration: 1s;
+        animation-name: glow;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+    
+    }
+    
+    @-webkit-keyframes glow2 {
+        from {text-shadow: 0 0 0px white; }
+        to { text-shadow: 0 0 90px white; }
+    }
+
+.button{ 
+
+	margin-top:10px;
+	display: inline-block;      
+	width: 80px; 
+	height :50px;
+	font-size:20px;
+	text-align: center; 
+	background: #ffd24d;
+	font-weight: bold;
+	color: #4d2600;
+	text-decoration: none;
+	border: 2px solid maroon;
+}
+@keyframes pulse_animation {
+	0% { transform: scale(1); }
+	30% { transform: scale(1); }
+	40% { transform: scale(1.08); }
+	50% { transform: scale(1); }
+	60% { transform: scale(1); }
+	70% { transform: scale(1.05); }
+	80% { transform: scale(1); }
+	100% { transform: scale(1); }
+}
+
+.pulse {
+	animation-name: pulse_animation;
+	animation-duration: 5000ms;
+	transform-origin:100% 100%;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.adjust{
+	margin-top:121px;
+	margin-left:448px;
+}
+
+
+
+
+.ba {
+     background-color: white;
+    -webkit-animation-name: example; 
+    -webkit-animation-duration: 4s;
+    animation-name: example;
+?     animation-duration: 4s;
+}
+@-webkit-keyframes example {
+    0%   {background-color: white;}
+    25%  {background-color: grey;}
+    100%  {background-color: blue;}
+}
+
+.glowhead {
+        -webkit-animation-duration: 1s;
+        -webkit-animation-name: glow;
+        -webkit-animation-direction: alternate;
+        -webkit-animation-iteration-count: infinite;
+        animation-duration: 0.3s;
+        animation-name: glowh;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+    	margin-left:280px;
+	border-radius:35px;
+	background:#c8b35b;
+	width:500px;
+	height:40px;
+	text-align:center;
+	color:#4d2600;
+	margin-top:-980px;
+	
+    }
+    
+    @-webkit-keyframes glowh {
+        from { box-shadow: 0 0 0px white; }
+        to { box-shadow: 0 0 78px #4d2600; }
+
+</style>
+
+<script>
+var memory_array=['A','A','B','B','C','C','D','D','E','E','F','F','G','G','H','H'];
+var memory_values=[];
+var tiles_flipped=0;
+var memory_tile_ids=[];
+var turn=0;
+var score=0;
+var strat=0;
+var pretar=null;
+Array.prototype.memory_tile_shuffle=function(){
+	var i=this.length,j,temp;
+	while(--i>0){
+	j=Math.floor(Math.random()*(i+1));
+	temp=this[j];
+	this[j]=this[i];
+	this[i]=temp;
+	
+       }
+}
+function newBoard(){
+	c=0;
+	tiles_flipped=0;
+	score=0;
+	turn=0;
+	document.getElementById("turn").innerHTML = turn;
+	document.getElementById("score").innerHTML = score;
+	var output="";
+	memory_array.memory_tile_shuffle();
+	for(var i=0;i<memory_array.length;i++){
+		output += '<div id="tile_'+i+'" onclick="memoryFlipTile(this,\' '+memory_array[i]+'\')"></div>';
+	}
+	document.getElementById('memory_board').innerHTML = output;
+}
+function memoryFlipTile(tile,val){
+		if (strat==0){
+		c=0;
+		doTimer();
+		}
+		strat+=1;
+		
+		
+		
+	if(tile.innerHTML=="" && memory_values.length<2){		
+	tile.style.background="white";
+		tile.innerHTML=val;
+		if(memory_values.length==0){
+			memory_values.push(val);
+			memory_tile_ids.push(tile.id);
+		}  else if(memory_values.length ==1){
+			memory_values.push(val);
+			memory_tile_ids.push(tile.id);
+			var tile_1=document.getElementById(memory_tile_ids[0]);
+			var tile_2=document.getElementById(memory_tile_ids[1]);
+			if(tile_1==tile_2){
+				alert("You have clicked this card again");
+			}
+			if(memory_values[0]==memory_values[1]){
+				tiles_flipped +=2;
+				turn+=2;
+				document.getElementById("turn").innerHTML = turn;
+				score+=10;
+				var tile_1=document.getElementById(memory_tile_ids[0]);
+				var tile_2=document.getElementById(memory_tile_ids[1]);
+				tile_1.style.background='url(bird5.jpg)  no-repeat';
+				tile_2.style.background='url(bird5.jpg)  no-repeat';
+				tile_1.innerHTML="";
+				tile_2.innerHTML="";
+				tile_1.style.borderColor="transparent";
+				tile_2.style.borderColor="transparent";
+				document.getElementById("score").innerHTML = score;
+				memory_values=[];
+				memory_tile_ids=[];
+				if(tiles_flipped == memory_array.length){
+					document.getElementById('memory_board').innerHTML = "";
+					document.getElementById("score").innerHTML = score;
+					document.getElementById("turn").innerHTML = turn;
+					score=0;
+					turn=0;
+					alert("Congrats!! for clearing the task!Wanna play again?");
+					newBoard();
+				}
+			}else {
+				function flip2Back(){
+					turn+=2;
+					score-=5;
+					document.getElementById("turn").innerHTML = turn;
+					document.getElementById("score").innerHTML = score;
+					var tile_1=document.getElementById(memory_tile_ids[0]);
+					var tile_2=document.getElementById(memory_tile_ids[1]);
+					tile_1.style.background='url(bird3.jpg)  no-repeat';
+					tile_1.style.transform="rotateY(0deg)";
+					tile_1.innerHTML="";					
+					tile_2.innerHTML="";
+					tile_2.style.background= 'url(bird3.jpg) no-repeat';
+					tile_2.style.transform="rotateY(0deg)"
+					memory_values=[];
+					memory_tile_ids=[];
+				
+				}
+				setTimeout (flip2Back,900);
+			         }
+			}
+}
+}
+
+
+		
+</script>
+</head>
+
+<body class="mar">
+<div class="inst">
+<div class="cur">
+<div id="flip" >INSTRUCTIONS</div>
+</div>
+<div class="insti">
+<div id="panel">............................SIVAGAMI feels the time has come to decide the successor to the throne of MAHISHMATI! Valour and intelligence will be the criteria to decide. Complete the game within .......................... the stipulated time & prove yourself WORTHY to the throne!! All u need is to match two cards and make them disappear and atmost two cards can be flipped at a time.</div>
+</div>
+</div>
+<div class="b77">
+<img src="b7.jpg" style="border:2px dashed #e4b103">
+</div>
+<script>
+alert("Please turn up your volume !!!!!");
+</script>
+<div class="glowhead">
+<h1>! CARD MATCHING GAME!</h1>
+</div>
+
+
+<div id="memory_board"></div>
+
+
+
+<div class="glower1">
+<div class="sco">
+<div class="attem">
+<pre class="attem" style="font-family: 'Open Sans', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Merriweather', serif;
+font-family: 'Special Elite', cursive;
+font-family: 'Amatic SC', cursive;
+font-size: 50px;color:black">Score: <a id="score" style="font-size:40px">0</a>		Attempts: <a id="turn" style="font-size:40px">START</a>
+			
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div class= "g1">
+<img src="g1.gif">
+</div>
+<div class= "g2">
+<img src="g23.gif">
+</div>
+<div class= "g3">
+<img src="g67.gif">
+</div>
+
+</div>
+</div>
+<embed src="musica.mp3" autostart="true" loop="infinite" width="2" height="0"></audio>
+<script>newBoard();</script>
+<div class="tim">
+<div class="timback">
+
+<script type="text/javascript">
+var c=0;
+var t;
+var timer_is_on=0;
+
+function timedCount()
+{
+document.getElementById('txt').value=c;
+c=c+1;
+t=setTimeout("timedCount()",1000);
+}
+
+function doTimer()
+{
+if (!timer_is_on)
+  {
+  timer_is_on=1;
+  timedCount();
+  }
+}
+
+function stopCount()
+{
+clearTimeout(t);
+timer_is_on=0;
+}
+</script>
+<script> 
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+});
+</script>
+<div class="box">
+<button class="button" onclick="doTimer()" >Start timer </button>
+</div>
+<div class="limit">
+<input type="text" id="txt" size= "6 "/>
+</div>
+<button class="button" onclick="stopCount()" >Pause timer </button>
+</div>
+</div>
+<div class="adjust">
+<div class="glow2">
+<a href="index.html" class="button pulse">start over</a>
+</div>
+</div>
+
+</body>
+</html>
